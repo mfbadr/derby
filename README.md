@@ -1,7 +1,7 @@
 ## name of project
 ### Code Badges
-build status icon
-coverage status icon
+[![Build Status](https://travis-ci.org/mfbadr/derby.svg)](https://travis-ci.org/mfbadr/derby)
+[![Coverage Status](https://coveralls.io/repos/mfbadr/derby/badge.png)](https://coveralls.io/r/mfbadr/derby)
 
 ### About
 write a description about your project
