@@ -1,32 +1,32 @@
 {
   "_id":{"$oid":"000000000000000000000001"},
   "name":"Bob",
-  "photo":"http://africanaconnections.com/wp-content/uploads/2011/11/AC-PostPic-11142011a.jpg",
+  "photo":"/img/bob.jpg",
   "cash":1000.45,
   "results":{"wins":4, "losses": 5},
-  "spouse":{"name":"Sara", "photo":"http://www.saragran.com/Sara_Gran/SaraGranwebpic.jpg"},
+  "spouse":{"name":"Sara", "photo":"/img/sara.jpg"},
   "assets":[
-    {"name":"ring", "photo":"http://www.indigo-studios.org/wp-content/uploads/2013/11/tension-engagement-ring.jpg","value":500},
-    {"name":"car", "photo":"http://www.picturesnew.com/media/images/794428aafd.png", "value":200}
+    {"name":"ring", "photo":"/img/ring.jpg","value":500},
+    {"name":"car", "photo":"/img/car.png", "value":200}
   ]
 }
 
 {
   "_id":{"$oid":"000000000000000000000002"},
   "name":"Joe",
-  "photo":"https://pbs.twimg.com/profile_images/378800000688783089/c894773e60a1f144a71711c4532d9504.jpeg",
+  "photo":"/img/joe.jpeg",
   "cash":5000.45,
   "results":{"wins":2, "losses": 9},
-  "spouse":{"name":"Sally", "photo":"http://4.bp.blogspot.com/_tCuyLX5L4xM/TTcDwLIaBGI/AAAAAAAAAQ8/dfOBh_Bg2JQ/s1600/nightmare_before_christmas_sally.jpg"},
-  "assets":[{"name":"mortgage", "photo":"http://www.clker.com/cliparts/8/9/9/d/11949855741697952186small_house_01.svg.med.png", "value":5000}, {"name":"Gold tooth", "photo":"http://thumbs.dreamstime.com/x/gold-tooth-17788527.jpg", "value":100}]
+  "spouse":{"name":"Sally", "photo":"/img/sally.jpg"},
+  "assets":[{"name":"mortgage", "photo":"/img/house.png", "value":5000}, {"name":"Gold tooth", "photo":"/img/gold-tooth.jpg", "value":100}]
 }
 
 {
   "_id":{"$oid":"000000000000000000000003"},
   "name":"Sam",
-  "photo":"http://upload.wikimedia.org/wikipedia/en/c/ca/Trrue_blood_sam_merlotte.jpg",
+  "photo":"/img/sam.jpg",
   "cash":100,
   "results":{"wins":9, "losses":2},
-  "spouse":{"name":"Suzy", "photo":"http://koogle.tv/static/media/uploads/news/11-29-13_suzy.jpg"},
-  "assets":[{"name":"Rolex", "photo":"http://content.rolex.com/is/image/Rolex/?src=is%7BRolex%2F9821013346185057206XpM%3F%26layer%3D1%26src%3Dblack--rds--g--g--44%26layer%3D2%26src%3D116660133461831467829po%7D&$description$&rotate=86.5&extend=-1352,-727,-45,-819", "value":1000}, {"name":"Painting", "photo":"http://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg/687px-Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg", "value":2000}]
+  "spouse":{"name":"Suzy", "photo":"/img/suzy.jpg"},
+  "assets":[{"name":"Rolex", "photo":"/img/rolex.jpg", "value":1000}, {"name":"Painting", "photo":"/img/painting.jpg", "value":2000}]
 }

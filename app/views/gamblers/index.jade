@@ -1,9 +1,9 @@
 extends ../shared/template
 block content
-  h2 Gamblers 
+  h2.pageTitle The Gamblers 
   #gamblers
     each gambler in gamblers
       include gambler
 block scripts
-  script(src='/js/user/home.js')
+  script(src='/js/user/gambler.js')
 

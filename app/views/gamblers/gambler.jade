@@ -9,8 +9,8 @@
       .asset
         img(src='#{asset.photo}')
         .assetInfo
-          p= asset.name
-          p $#{asset.value}
+          .assetName= asset.name
+          .assetValue $#{asset.value}
   p Wins: #{gambler.results.wins}
   p Losses: #{gambler.results.losses}
 

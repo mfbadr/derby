@@ -21,11 +21,21 @@ h1{
 h3{
   font-size: 20px;
 }
+
+.pageTitle{
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 15px;
+}
 #header {
   padding-left: 15px;
   font-size: auto;
+  background-color: #DB776B;
+  margin-bottom: 15px;
 }
-
+nav {
+  display: inline;
+}
 nav ul li{
   text-decoration: none;
   margin: 15px;
@@ -59,7 +69,8 @@ nav ul li{
 
 .gambler .asset{
   position: relative;
-  border: 1px solid black;
+  border: 1px dotted black;
+  margin-top: 10px;
 }
 
 .gambler .assetInfo{
