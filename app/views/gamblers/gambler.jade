@@ -4,11 +4,13 @@
   h3 Cash: $#{gambler.cash}
   h3 Spouse: #{gambler.spouse.name}
   img(src='#{gambler.spouse.photo}')
-  ul Assets:
+  h3 Assets
     each asset in gambler.assets
-      ul#assetName= asset.name
-        li Value: $#{asset.value}
-        li: img(src='#{asset.photo}')
+      .asset
+        img(src='#{asset.photo}')
+          .assetInfo
+            p= asset.name
+            p $#{asset.value}
   p Wins: #{gambler.results.wins}
   p Losses: #{gambler.results.losses}
-  
+
