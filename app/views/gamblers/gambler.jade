@@ -1,0 +1,14 @@
+.gambler(data-gambler-id=gambler._id.toString())
+  h3= gambler.name
+  img(src='#{gambler.photo}')
+  h3 Cash: $#{gambler.cash}
+  h3 Spouse: #{gambler.spouse.name}
+  img(src='#{gambler.spouse.photo}')
+  ul Assets:
+    each asset in gambler.assets
+      ul#assetName= asset.name
+        li Value: $#{asset.value}
+        li: img(src='#{asset.photo}')
+  p Wins: #{gambler.results.wins}
+  p Losses: #{gambler.results.losses}
+  

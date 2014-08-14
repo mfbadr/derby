@@ -1,12 +1,51 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
+html{
+  font-family: 'Open Sans', sans-serif;
+
+}
 *{
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
+  font: inherit;
 }
 
 body{
-  background-image: url(/img/node.png);
+  background-image: url(/img/Felt-Green.jpg);
   background-size: cover;
 }
 
+h1{
+  font-size: 25px;
+}
+h3{
+  font-size: 20px;
+}
+
+.gambler{
+  vertical-align: top;
+  padding: 10px;
+  background-color: #DDD;
+  margin: 10px;
+  display: inline-block;
+  border: 2px solid black;
+  max-width: 30%;
+  overflow: hidden;
+}
+
+.gambler img{
+  max-width: 200px;
+}
+
+.gambler ul {
+  list-style: auto;
+  padding: 5px;
+}
+
+.gambler ul img{
+  max-width: 50px;
+}
+
+.gambler #assetName{
+  font-weight: bold;
+}
