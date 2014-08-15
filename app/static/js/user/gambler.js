@@ -19,12 +19,12 @@
       console.log(data.id, data.asset);
       var $asset = $('.assetName:contains('+data.asset+')').closest('.asset');
       $asset.fadeOut();
-      var $cash = $('.assetName:contains('+data.asset+')').closest(".gambler").find(".cash").text(data.newCash);
+      //var $cash =
+      $('.assetName:contains('+data.asset+')').closest('.gambler').find('.cash').text(data.newCash);
       var $gambler = $('.gambler[data-gambler-id='+data.id+']');
 
       //debugger;
-      $cash;
-      
+      //$cash;
       if(data.isDivorced){
         var $spouse = $gambler.find('.spouse');
         $spouse.fadeOut();
