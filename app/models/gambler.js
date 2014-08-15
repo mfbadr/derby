@@ -34,7 +34,7 @@ Gambler.prototype.sellAsset = function(name){
 };
 
 Gambler.prototype.addAsset = function(o){
-  console.log(this.assets);
+  //console.log(this.assets);
   this.assets.push({name:o.name, photo:o.photo, value:o.value * 1});
 };
 

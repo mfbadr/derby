@@ -3,8 +3,10 @@
   img(src='#{gambler.photo}')
   h3 Cash: $
     span.cash #{gambler.cash}
-  h3 Spouse: #{gambler.spouse.name}
-  img(src='#{gambler.spouse.photo}')
+  if gambler.assets.length
+    .spouse
+      h3 Spouse: #{gambler.spouse.name}
+      img(src='#{gambler.spouse.photo}')
   h3 Assets
     each asset in gambler.assets
       .asset

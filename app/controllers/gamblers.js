@@ -11,9 +11,9 @@ exports.index = function(req, res){
 
 exports.sellAsset = function(req, res){
   Gambler.findById(req.params.id, function(g){
-    g.sellAsset(req.query.asset);
+    g.sellAsset(req.params.asset);
     Gambler.collection.save(g, function(){
-      res.send({id:req.params.id, asset:req.query.asset, newCash:g.cash});
+      res.send({id:req.params.id, asset:req.params.asset, newCash:g.cash, isDivorced:!!!g.assets.length});
     });
   });
 };
