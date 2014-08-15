@@ -1,3 +1,4 @@
+/*jshint -W109 */
 (function(){
   'use strict';
 
@@ -16,9 +17,11 @@
     // url = url, n
     $.ajax({url:url, type:'delete', dataType:'json', success:function(data){
       console.log(data.id, data.asset);
-      var $asset = $('.assetName:contains('+data.asset+')').closest('.asset')
-      $asset.fadeOut(); 
+      var $asset = $('.assetName:contains('+data.asset+')').closest('.asset');
+      $asset.fadeOut();
+      var $cash = $('.assetName:contains('+data.asset+')').closest(".gambler").find(".cash").text(data.newCash);
       //debugger;
+      $cash;
     }});
   }
 

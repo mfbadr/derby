@@ -13,7 +13,7 @@ exports.sellAsset = function(req, res){
   Gambler.findById(req.params.id, function(g){
     g.sellAsset(req.query.asset);
     Gambler.collection.save(g, function(){
-      res.send({id:req.params.id, asset:req.query.asset});
+      res.send({id:req.params.id, asset:req.query.asset, newCash:g.cash});
     });
   });
 };

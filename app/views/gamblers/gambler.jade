@@ -1,7 +1,8 @@
 .gambler(data-gambler-id=gambler._id.toString())
   h3= gambler.name
   img(src='#{gambler.photo}')
-  h3 Cash: $#{gambler.cash}
+  h3 Cash: $
+    span.cash #{gambler.cash}
   h3 Spouse: #{gambler.spouse.name}
   img(src='#{gambler.spouse.photo}')
   h3 Assets
@@ -13,4 +14,4 @@
           .assetValue $#{asset.value}
   p Wins: #{gambler.results.wins}
   p Losses: #{gambler.results.losses}
-
+  a(href=/gamblers/${gambler._id}) Add an asset
