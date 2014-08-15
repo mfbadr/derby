@@ -14,4 +14,4 @@
           .assetValue $#{asset.value}
   p Wins: #{gambler.results.wins}
   p Losses: #{gambler.results.losses}
-  a(href=/gamblers/${gambler._id}) Add an asset
+  p: a(href='/gamblers/#{gambler._id}/assets/new') Add an asset

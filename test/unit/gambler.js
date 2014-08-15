@@ -47,10 +47,20 @@ describe('Gambler', function(){
     it('should remove an asset and add value to cash', function(done){
       Gambler.findById('000000000000000000000001', function(g){
         console.log(g);
-        g.removeAsset('ring');
+        g.sellAsset('ring');
         expect(g.assets).to.have.length(1);
         expect(g.cash).to.be.closeTo(1500,1);
         console.log(g);
+        done();
+      });
+    });
+  });
+  describe('addAsset', function(){
+    it('should add an asset', function(done){
+      Gambler.findById('000000000000000000000001', function(g){
+        g.addAsset({name:'name', photo:'photo', value:500});
+        expect(g.assets).to.have.length(3);
+        expect(g.assets[2].name).to.equal('name');
         done();
       });
     });

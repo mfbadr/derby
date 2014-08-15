@@ -1,0 +1,12 @@
+extends ../shared/template
+block content
+  h2.pageTitle Add an asset to #{gambler.name}
+  .form
+        label Add A New Asset
+        form(method='post', action='/gamblers')
+          input(name='name', type='text', placeholder='Asset', autofocus=true)
+          input(name='photo', type='text', placeholder='Photo URL')
+          input(name='value', type='text', placeholder='Dollar')
+          input(name='id', type='hidden', value='#{gambler._id}')
+          button.blue Add Asset
+
