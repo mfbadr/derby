@@ -1,16 +1,11 @@
 extends ../shared/template
 block content
-  h2.pageTitle Add an asset to #{gambler.name}
+  h2.pageTitle Add a Gambler
   .form
-        label Add A New Asset
-        form(method='post', action='/gamblers')
-          input(name='name', type='text', placeholder='Don Draper', autofocus=true)
-          input(name='photo', type='text', placeholder='Photo URL')
-          input(name='Spuse Name', type='text', placeholder='Don Draper', autofocus=true)
-          input(name='Spouse Photo', type='text', placeholder='http://upload.wikimedia.org/wikipedia/en/7/7b/Don_Draper_Wiki.jpg')
-          select(name='jl')
-            option(value='Breakfast') Breakfast
-            option(value='Lunch') Lunch
-            option(value='Dinner') Dinner 
-            option(value='Dessert') Dessert 
-          button.blue Add Asset!:
+    form(method='post', action='/gamblers')
+      input(name='name', type='text', placeholder='Gamber Name', autofocus=true)
+      input(name='photo', type='text', placeholder='Photo URL')
+      input(name='spouse[name]', type='text', placeholder='Spouse Name')
+      input(name='spouse[photo]', type='text', placeholder='Spouse Photo URL')
+      input(name='cash', type='text', placeholder='Cash')
+      button.blue Create

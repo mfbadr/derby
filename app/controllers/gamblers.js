@@ -25,12 +25,23 @@ exports.newAsset = function(req, res){
 };
 
 exports.addAsset = function(req, res){
-  Gambler.findById(req.body.id, function(g){
-    g.addAsset({name:req.body.name, photo:req.body.photo, value:req.body.value});
+  Gambler.findById(req.params.id, function(g){
+    g.addAsset(req.body);
     Gambler.collection.save(g, function(){
-      Gambler.all(function(err, gamblers){
-        res.render('gamblers/index', {gamblers:gamblers});
-      });
+      res.redirect('/gamblers');
+    });
+  });
+};
+
+exports.newGambler = function(req, res){
+  res.render('gamblers/newGambler');
+};
+
+exports.addGambler = function(req,res){
+  var g = new Gambler(req.body);
+  Gambler.collection.save(g, function(){
+    Gambler.all(function(err, gamblers){
+      res.render('gamblers/index', {gamblers:gamblers});
     });
   });
 };
