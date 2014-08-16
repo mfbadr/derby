@@ -3,7 +3,13 @@
 var _   = require('lodash'),
   Mongo = require('mongodb');
 
-function Gambler(){
+function Gambler(o){
+  this.name = o.name;
+  this.cash = parseFloat(o.cash);
+  this.spouse= {name:o.spouse.name, photo:o.spouse.photo};
+  this.assets = [];
+  this.photo = o.photo;
+  this.results = {wins:0, losses:0};
 }
 
 Object.defineProperty(Gambler, 'collection', {

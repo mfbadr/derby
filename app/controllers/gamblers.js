@@ -10,10 +10,10 @@ exports.index = function(req, res){
 };
 
 exports.sellAsset = function(req, res){
-  Gambler.findById(req.params.id, function(g){
-    g.sellAsset(req.params.asset);
-    Gambler.collection.save(g, function(){
-      res.send({id:req.params.id, asset:req.params.asset, newCash:g.cash, isDivorced:!!!g.assets.length});
+  Gambler.findById(req.params.id, function(g){ //find gambler by id
+    g.sellAsset(req.params.asset); //sell asset
+    Gambler.collection.save(g, function(){ //update gambler
+      res.send({id:req.params.id, asset:req.params.asset, newCash:g.cash, isDivorced:!!!g.assets.length}); //isDivorced is true if length = 0
     });
   });
 };

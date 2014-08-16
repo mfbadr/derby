@@ -22,8 +22,17 @@ describe('Gambler', function(){
   });
   describe('constructor', function(){
     it('should create a new Gambler object', function(){
-      var g = new Gambler();
+      var o = {name:'joe', cash:'500', photo:'image.com/joe.jpg', spouse:{name:'sally', photo:'image.com/sally.jpg'}},
+          g = new Gambler(o);
       expect(g).to.be.instanceof(Gambler);
+      expect(g.name).to.equal('joe');
+      expect(g.cash).to.equal(500);
+      expect(g.photo).to.equal('image.com/joe.jpg');
+      expect(g.spouse.name).to.equal('sally');
+      expect(g.spouse.photo).to.equal('image.com/sally.jpg');
+      expect(g.assets).to.have.length(0);
+      expect(g.results.wins).to.equal(0);
+      expect(g.results.losses).to.equal(0);
     });
   });
   describe('.all', function(){
